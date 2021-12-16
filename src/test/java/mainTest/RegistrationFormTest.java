@@ -1,6 +1,7 @@
 package mainTest;
 
 import com.github.javafaker.Faker;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -31,6 +32,7 @@ public class RegistrationFormTest extends TestBase {
             city = "Merrut";
 
     @Test
+    @DisplayName("Заполнение регистрационной формы")
     void successfulFillFormTest() {
         step("Открыть регистрационную форму студента", () -> {
             open("https://demoqa.com/automation-practice-form");
